@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ],
             ),
-            const CircularProgressIndicator(),
+           // const CircularProgressIndicator(),
           ],
         ),
       ),

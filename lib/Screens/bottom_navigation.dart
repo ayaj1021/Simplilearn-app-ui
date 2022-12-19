@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simplilearn_ui/homepage.dart';
+import 'package:simplilearn_ui/my_courses.dart';
 
 class ButtomNavigation extends StatefulWidget {
   const ButtomNavigation({super.key});
@@ -12,9 +13,9 @@ class _ButtomNavigationState extends State<ButtomNavigation> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    HomePage(),
-    const Text('My Courses'),
-    const Text('SkillUp Bytes'),
+    const HomePage(),
+    const MyCoursesPage(),
+    const Text('Skill up'),
     const Text('Quiz'),
     const Text('Community'),
   ];
@@ -34,7 +35,7 @@ class _ButtomNavigationState extends State<ButtomNavigation> {
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          elevation: 10,
+          elevation: 100,
           showSelectedLabels: true,
           showUnselectedLabels: true,
           selectedItemColor: Colors.blue,
@@ -46,7 +47,7 @@ class _ButtomNavigationState extends State<ButtomNavigation> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.book), label: 'My Courses'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.play_arrow_rounded), label: 'SkillUp Bytes'),
+                icon: Icon(Icons.play_arrow_rounded), label: 'SkillUp'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.chat_bubble_outline_outlined), label: 'Quiz'),
             BottomNavigationBarItem(
